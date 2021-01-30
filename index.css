@@ -23,7 +23,11 @@ body {
     position: absolute;
     bottom: -20px;
     font-size: 40px;
-    animation: driving 5s infinite;
+    animation: driving 3s infinite;
+}
+
+.night-countdown-container {
+    margin-top: 20px;
 }
 
 .main-container .countdowns-container {
@@ -37,7 +41,8 @@ body {
 
 .main-container .countdowns-container .countdown .countdown-header {
     text-align: center;
-    padding: 10px 0;
+    /* padding: 10px 0; */
+    margin-bottom: 10px;
     font-size: 30px;
 }
 
@@ -72,6 +77,8 @@ body {
     margin: 16px auto;
     border-radius: 20px;
     overflow: hidden;
+    transform: scale(0.8);
+    animation: rotate 3s ease-in-out infinite;
 }
 
 .main-container .countdowns-container .date-container .day-in-week {
@@ -98,12 +105,21 @@ body {
 
 @keyframes driving {
     0% {
-        transform: translateX(550%);
-    }
-    50% {
-        transform: translateX(-550%);
+        transform: translateX(650%);
     }
     100% {
-        transform: translateX(550%);
+        transform: translateX(-650%);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: scale(0.8) rotate(-5deg);
+    }
+    50% {
+        transform: scale(0.8) rotate(5deg);
+    }
+    100% {
+        transform: scale(0.8) rotate(-5deg);
     }
 }
