@@ -19,6 +19,11 @@ body {
     position: relative;
 }
 
+.main-container .header span {
+    position: absolute;
+    top: 22px;
+}
+
 .main-container .header .car {
     position: absolute;
     bottom: -20px;
