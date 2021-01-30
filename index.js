@@ -3,6 +3,7 @@ const licenseDate = new Date(2020, 11, 10);
 var licenseMoment = moment(licenseDate);
 var morningMoment = moment(licenseDate).add(3, 'months');
 var nightMoment = moment(licenseDate).add(6, 'months');
+var oldDriverMoment = moment(licenseDate).add(2, 'years');
 var today = moment().startOf('day');
 
 const getRemainingDateDetails = (dateInMoment) => {
@@ -46,3 +47,4 @@ const setCountdown = (countdownSelector, dateAsMoment) => {
 
 setCountdown('.morning-countdown-container', morningMoment);
 setCountdown('.night-countdown-container', nightMoment);
+setCountdown('.old-driver-countdown-container', oldDriverMoment);
