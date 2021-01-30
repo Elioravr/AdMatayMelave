@@ -73,6 +73,14 @@ body {
     /* padding: 10px 0; */
     margin-bottom: 10px;
     font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container .countdowns-container .countdown .countdown-header img {
+    width: 80px;
+    margin-right: 0px;
 }
 
 .main-container .countdowns-container .countdown .progress-bar {
