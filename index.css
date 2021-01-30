@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+.main-container {
+    padding-bottom: 50px;
+}
+
 .main-container .header {
     height: 80px;
     font-size: 25px;
@@ -17,6 +21,7 @@ body {
     align-items: center;
     border-bottom: 1px solid #ccc;
     position: relative;
+    padding-bottom: 20px;
 }
 
 .main-container .header span {
@@ -28,7 +33,16 @@ body {
     position: absolute;
     bottom: -20px;
     font-size: 40px;
+    transform: translateX(650%);
     animation: driving 3s infinite;
+}
+
+.main-container .header .car.car-2 {
+    animation: driving 5s 2s infinite;
+}
+
+.main-container .header .car.car-3 {
+    animation: driving 8s 3s infinite;
 }
 
 .night-countdown-container,
