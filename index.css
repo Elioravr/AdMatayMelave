@@ -47,11 +47,18 @@ body {
 }
 
 .main-container .header .car.car-4 {
-    animation: driving 2.5s 0.5s infinite;
+    font-size: 45px;
+    animation: driving 5.5s 1.5s infinite;
 }
 
 .main-container .header .car.car-5 {
-    animation: driving 5s 0.6s infinite;
+    font-size: 30px;
+    animation: driving 7s 0.7s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .header .car.police {
+    animation: driving 2s 2s infinite;
 }
 
 .night-countdown-container,
