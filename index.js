@@ -6,12 +6,25 @@ if (savedDate) {
 }
 
 const dateInput = document.querySelector('#license-date-input');
-// var currentDate = date.toISOString().slice(0,10);
-dateInput.value = licenseDate.toISOString().slice(0,10);;
+
+const setLicenseDateOnCalendar = () => {
+    const dateAsMoment = moment(licenseDate);
+
+    const dateContainerDayInWeek = document.querySelector(`.license-date-container .date-container .day-in-week`);
+    dateContainerDayInWeek.innerHTML = dateAsMoment.format('dddd');
+    const dateContainerDay = document.querySelector(`.license-date-container .date-container .day`);
+    dateContainerDay.innerHTML = dateAsMoment.format('DD');
+    const monthContainerDay = document.querySelector(`.license-date-container .date-container .month`);
+    monthContainerDay.innerHTML = dateAsMoment.format('MMMM');
+}
+
+dateInput.value = licenseDate.toISOString().slice(0,10);
+setLicenseDateOnCalendar();
 dateInput.addEventListener('change', (e) => {
     const chosenDate = new Date(e.target.value);
     licenseDate = chosenDate;
     localStorage.setItem('licenseDate', chosenDate.toISOString());
+    setLicenseDateOnCalendar();
     renderEverything();
 })
 

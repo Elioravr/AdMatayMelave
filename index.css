@@ -125,7 +125,7 @@ body {
     align-items: center;
 }
 
-.main-container .countdowns-container .date-container {
+.date-container {
     height: 120px;
     width: 120px;
     border: 1px solid #aaa;
@@ -136,7 +136,7 @@ body {
     animation: rotate 3s ease-in-out infinite;
 }
 
-.main-container .countdowns-container .date-container .day-in-week {
+.date-container .day-in-week {
     height: 30px;
     background-color: rgb(255, 59, 48);
     color: white;
@@ -145,25 +145,32 @@ body {
     align-items: center;
 }
 
-.main-container .countdowns-container .date-container .day {
+.date-container .day {
     font-size: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.main-container .countdowns-container .date-container .month {
+.date-container .month {
     text-transform: uppercase;
     font-size: 18px;
     text-align: center;
 }
 
 .main-container .license-date-container {
+    border-top: 1px solid #ccc;
+    padding: 20px;
     text-align: center;
+    position: relative;
 }
 
 .main-container .license-date-container #license-date-input {
     direction: lrt;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 @keyframes driving {
