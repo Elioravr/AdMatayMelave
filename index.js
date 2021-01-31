@@ -11,11 +11,11 @@ const setLicenseDateOnCalendar = () => {
     const dateAsMoment = moment(licenseDate);
 
     const dateContainerDayInWeek = document.querySelector(`.license-date-container .date-container .day-in-week`);
-    dateContainerDayInWeek.innerHTML = dateAsMoment.format('dddd');
+    dateContainerDayInWeek.innerHTML = dateAsMoment.format('MMMM');
     const dateContainerDay = document.querySelector(`.license-date-container .date-container .day`);
     dateContainerDay.innerHTML = dateAsMoment.format('DD');
     const monthContainerDay = document.querySelector(`.license-date-container .date-container .month`);
-    monthContainerDay.innerHTML = dateAsMoment.format('MMMM');
+    monthContainerDay.innerHTML = dateAsMoment.format('yyyy');
 }
 
 dateInput.value = licenseDate.toISOString().slice(0,10);
@@ -26,7 +26,18 @@ dateInput.addEventListener('change', (e) => {
     localStorage.setItem('licenseDate', chosenDate.toISOString());
     setLicenseDateOnCalendar();
     renderEverything();
-})
+});
+
+document.addEventListener('scroll', function(e) {
+  const scrollY = window.scrollY;
+  const separator = document.querySelector('.separator');
+
+  if (scrollY >= 20) {
+      separator.classList.remove('long');
+  } else {
+      separator.classList.add('long');
+  }
+});
 
 const renderEverything = () => {
     const licenseMoment = moment(licenseDate);
@@ -67,11 +78,11 @@ const renderEverything = () => {
         }
 
         const dateContainerDayInWeek = document.querySelector(`${countdownSelector} .date-container .day-in-week`);
-        dateContainerDayInWeek.innerHTML = dateAsMoment.format('dddd');
+        dateContainerDayInWeek.innerHTML = dateAsMoment.format('MMMM');
         const dateContainerDay = document.querySelector(`${countdownSelector} .date-container .day`);
         dateContainerDay.innerHTML = dateAsMoment.format('DD');
         const monthContainerDay = document.querySelector(`${countdownSelector} .date-container .month`);
-        monthContainerDay.innerHTML = dateAsMoment.format('MMMM');
+        monthContainerDay.innerHTML = dateAsMoment.format('yyyy');
     }
 
     setCountdown('.morning-countdown-container', morningMoment);

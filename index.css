@@ -20,14 +20,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #ccc;
     position: relative;
     padding-bottom: 35px;
 }
 
+.main-container .header .separator {
+    height: 1px;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    background-color: white;
+    transition: top 0.3s ease-in-out;
+}
+
+.main-container .header .separator.long {
+    /* height: 60px; */
+    top: 116px;
+}
+
 .main-container .header span {
-    position: absolute;
-    top: 22px;
+    position: fixed;
+    display: block;
+    background: white;
+    top: 0;
+    padding-top: 22px;
+    padding-bottom: 10px;
+    z-index: 100;
+    right: 0;
+    left: 0;
+    text-align: center;
 }
 
 .main-container .header .car {
@@ -36,15 +61,17 @@ body {
     font-size: 40px;
     transform: translateX(650%);
     animation: driving 3s infinite;
+    z-index: 12;
 }
 
 .main-container .header .plane {
-    position: absolute;
+    position: fixed;
     top: 0px;
     font-size: 40px;
     transform: translateX(1000%);
-    animation: flying 40s 7s infinite;
+    animation: flying 30s 4s infinite;
     animation-timing-function: linear;
+    z-index: 101;
 }
 
 .main-container .header .car.car-2 {
@@ -195,19 +222,19 @@ body {
     0% {
         transform: scale(0.5) translateX(2000%) translateY(0);
     }
-    5% {
+    10% {
         transform: scale(0.5) translateX(1200%) translateY(10px);
     }
-    10% {
+    20% {
         transform: scale(0.5) translateX(400%) translateY(0);
     }
-    15% {
+    30% {
         transform: scale(0.5) translateX(-400%) translateY(10px);
     }
-    20% {
+    40% {
         transform: scale(0.5) translateX(-1200%) translateY(0);
     }
-    25% {
+    50% {
         transform: scale(0.5) translateX(-2000%) translateY(10px);
     }
     100% {
