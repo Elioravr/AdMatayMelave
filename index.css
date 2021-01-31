@@ -203,6 +203,21 @@ body {
     opacity: 0;
 }
 
+.main-container .license-date-container .date-container {
+    margin-top: 0;
+}
+
+.main-container .license-date-container .edit {
+    color: rgb(0, 122, 255);
+}
+
+.main-container .license-date-container .edit .pointer {
+    animation: pointer 0.7s ease-in-out infinite;
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
 @keyframes driving {
     0% {
         transform: translateX(650%);
@@ -254,5 +269,29 @@ body {
     }
     100% {
         transform: scale(0.8) rotate(-5deg);
+    }
+}
+
+@keyframes pointer {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(15px) translateY(20px);
+    }
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
+
+@keyframes pointer {
+    0% {
+        transform: scaleX(-1) rotate(0);
+    }
+    50% {
+        transform: scaleX(-1) rotate(20deg);
+    }
+    100% {
+        transform: scaleX(-1) rotate(0);
     }
 }
