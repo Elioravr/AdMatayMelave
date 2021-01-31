@@ -162,6 +162,10 @@ body {
     text-align: center;
 }
 
+.main-container .license-date-container #license-date-input {
+    direction: lrt;
+}
+
 @keyframes driving {
     0% {
         transform: translateX(650%);
