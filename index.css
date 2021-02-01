@@ -86,7 +86,7 @@ body {
     top: 0px;
     font-size: 40px;
     transform: translateX(1000%);
-    animation: flying 30s 4s infinite;
+    animation: flying 30s 2s infinite;
     animation-timing-function: linear;
     z-index: 101;
 }
@@ -260,7 +260,7 @@ body {
 .main-container .footer .sidewalk .parking-car {
     position: absolute;
     font-size: 50px;
-    bottom: -14px;
+    bottom: -16px;
 }
 
 .main-container .footer .sidewalk .parking-car.parking-car-1 {
@@ -296,6 +296,11 @@ body {
     margin: 30px 0;
 }
 
+.main-container .footer .dev-name .sub-credit {
+    color: #ccc;
+    font-size: 12px;
+}
+
 @keyframes driving {
     0% {
         transform: translateX(650%);
@@ -318,19 +323,19 @@ body {
     0% {
         transform: scale(0.5) translateX(2000%) translateY(0);
     }
-    10% {
+    14% {
         transform: scale(0.5) translateX(1200%) translateY(10px);
     }
-    20% {
+    28% {
         transform: scale(0.5) translateX(400%) translateY(0);
     }
-    30% {
+    42% {
         transform: scale(0.5) translateX(-400%) translateY(10px);
     }
-    40% {
+    56% {
         transform: scale(0.5) translateX(-1200%) translateY(0);
     }
-    50% {
+    70% {
         transform: scale(0.5) translateX(-2000%) translateY(10px);
     }
     100% {
