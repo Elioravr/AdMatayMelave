@@ -55,6 +55,23 @@ body {
     text-align: center;
 }
 
+.main-container .header .traffic-light {
+    position: absolute;
+    bottom: 10px;
+    left: 60px;
+    font-size: 30px;
+}
+
+.main-container .header .traffic-light:after {
+    content: ' ';
+    width: 3px;
+    height: 20px;
+    background-color: #333;
+    position: absolute;
+    bottom: -12px;
+    left: 13px;
+}
+
 .main-container .header .car {
     position: absolute;
     bottom: -20px;
