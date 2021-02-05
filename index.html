@@ -1,120 +1,138 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>עד מתי מלווה?</title>
-        <link href="index.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;800&display=swap" rel="stylesheet">
 
-        <meta charset="utf-8" />
-        <link rel="icon" href="images/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta
-        name="description"
-        content="Web site created using create-react-app"
-        />
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-title" content="עד מתי מלווה?">
-        <meta name="apple-mobile-web-app-status-bar-style" content="default">
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <!-- <link rel="apple-touch-icon" sizes="128x128" href="https://i.pinimg.com/originals/a1/f2/b6/a1f2b61db574b402396651a5cb6ad2bb.jpg"> -->
-        <!-- <link rel=”apple-touch-icon” href="appicon.jpg"> -->
-        <link rel="apple-touch-icon" sizes="57x57" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="114x114" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="72x72" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="144x144" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="60x60" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="120x120" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="76x76" href="appicon-5.png"">
-        <link rel="apple-touch-icon" sizes="152x152" href="appicon-5.png"">
+<head>
+    <title>עד מתי מלווה?</title>
+    <link href="index.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;500;800&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="עד מתי מלווה?">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- <link rel="apple-touch-icon" sizes="128x128" href="https://i.pinimg.com/originals/a1/f2/b6/a1f2b61db574b402396651a5cb6ad2bb.jpg"> -->
+    <!-- <link rel=”apple-touch-icon” href="appicon.jpg"> -->
+    <link rel="apple-touch-icon" sizes="57x57" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="114x114" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="72x72" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="144x144" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="60x60" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="120x120" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="76x76" href="appicon-5.png"">
+        <link rel=" apple-touch-icon" sizes="152x152" href="appicon-5.png"">
 
     </head>
     <body>
-        <div class="main-container">
-            <div class="header">
-                <span>עד מתי מלווה?</span>
-                <div class="traffic-light">🚦</div>
-                <div class="car">🚗</div>
-                <div class="car car-2">🚙</div>
-                <div class="car car-3">🚕</div>
-                <div class="car car-4">🚎</div>
-                <div class="car police">🚓</div>
-                <div class="car car-5">🚴‍♀️</div>
-                <div class="plane">🚁</div>
-                <div class="separator long"></div>
+        <div class=" main-container">
+    <div class="header">
+        <span>עד מתי מלווה?</span>
+        <div class="traffic-light">🚦</div>
+        <div class="car">🚗</div>
+        <div class="car car-2">🚙</div>
+        <div class="car car-3">🚕</div>
+        <div class="car car-4">🚎</div>
+        <div class="car police">🚓</div>
+        <div class="car car-5">🚴‍♀️</div>
+        <div class="plane">🚁</div>
+        <div class="separator long"></div>
+    </div>
+    <div class="countdowns-container">
+        <div class="countdown morning-countdown-container">
+            <div class="countdown-header">מלווה בוקר 🌤</div>
+            <div class="text"></div>
+            <div class="date-container">
+                <div class="day-in-week"></div>
+                <div class="day"></div>
+                <div class="month"></div>
             </div>
-            <div class="countdowns-container">
-                <div class="countdown morning-countdown-container">
-                    <div class="countdown-header">מלווה בוקר 🌤</div>
-                    <div class="text"></div>
-                    <div class="date-container">
-                        <div class="day-in-week"></div>
-                        <div class="day"></div>
-                        <div class="month"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                <div class="countdown night-countdown-container">
-                    <div class="countdown-header">מלווה לילה 🌔</div>
-                    <div class="text"></div>
-                    <div class="date-container">
-                        <div class="day-in-week"></div>
-                        <div class="day"></div>
-                        <div class="month"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-                <div class="countdown old-driver-countdown-container">
-                    <div class="countdown-header">כבר לא <img src="oldDriver.png" /></div>
-                    <div class="text"></div>
-                    <div class="date-container">
-                        <div class="day-in-week"></div>
-                        <div class="day"></div>
-                        <div class="month"></div>
-                    </div>
-                    <div class="progress-bar">
-                        <div class="progress"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="license-date-container">
-                <div>מתי קיבלתי את הרישיון?</div>
-                <input type="date" id="license-date-input" />
-                <div class="edit">עריכה<div class="pointer">✏️</div></div>
-                <div class="date-container">
-                    <div class="day-in-week"></div>
-                    <div class="day"></div>
-                    <div class="month"></div>
-                </div>
-            </div>
-            <div class="footer">
-                <div class="sidewalk">
-                    <div class="sidewalk-part blue"></div>
-                    <div class="sidewalk-part white"></div>
-                    <div class="sidewalk-part blue"></div>
-                    <div class="sidewalk-part white"></div>
-                    <div class="sidewalk-part blue"></div>
-                    <div class="sidewalk-part white"></div>
-                    <div class="sidewalk-part blue"></div>
-
-                    <div class="parking-car parking-car-1">🚙</div>
-                    <div class="parking-car parking-car-2">🚒</div>
-                    <div class="parking-car parking-car-3">🚌</div>
-                    <div class="parking-car parking-car-4">🚗</div>
-                </div>
-                <div class="dev-name">
-                    <div>© Elior Abramoviz</div>
-                    <div class="sub-credit">Inspired by Noam Ron</div>
-                </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
             </div>
         </div>
+        <div class="countdown night-countdown-container">
+            <div class="countdown-header">מלווה לילה 🌔</div>
+            <div class="text"></div>
+            <div class="date-container">
+                <div class="day-in-week"></div>
+                <div class="day"></div>
+                <div class="month"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <div class="car-separator">
+            <div class="sun">☀️</div>
+            <div class="car">🚙</div>
+            <div class="cloud cloud-1">☁️</div>
+            <div class="cloud cloud-2">☁️</div>
+            <div class="cloud cloud-3">☁️</div>
+            <div class="cloud cloud-4">☁️</div>
+            <div class="cloud cloud-5">☁️</div>
+            <div class="music music-1">🎵</div>
+            <div class="music music-2">🎵</div>
+            <div class="music music-3">🎵</div>
+            <div class="music music-4">🎵</div>
+            <div class="view">🏡</div>
+            <div class="signpost">
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/7/77/Maximum_Speed_limit_60km-ht_PW03_R1_41.png" />
+            </div>
+        </div>
+        <div class="countdown old-driver-countdown-container">
+            <div class="countdown-header">כבר לא <img src="oldDriver.png" /></div>
+            <div class="text"></div>
+            <div class="date-container">
+                <div class="day-in-week"></div>
+                <div class="day"></div>
+                <div class="month"></div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+    <div class="license-date-container">
+        <div>מתי קיבלתי את הרישיון?</div>
+        <input type="date" id="license-date-input" />
+        <div class="edit">עריכה<div class="pointer">✏️</div>
+        </div>
+        <div class="date-container">
+            <div class="day-in-week"></div>
+            <div class="day"></div>
+            <div class="month"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="sidewalk">
+            <div class="sidewalk-part blue"></div>
+            <div class="sidewalk-part white"></div>
+            <div class="sidewalk-part blue"></div>
+            <div class="sidewalk-part white"></div>
+            <div class="sidewalk-part blue"></div>
+            <div class="sidewalk-part white"></div>
+            <div class="sidewalk-part blue"></div>
 
-        <script src="moment.js" type="text/javascript"></script>
-        <script src="index.js" type="text/javascript"></script>
+            <div class="parking-car parking-car-1">🚙</div>
+            <div class="parking-car parking-car-2">🚒</div>
+            <div class="parking-car parking-car-3">🚌</div>
+            <div class="parking-car parking-car-4">🚗</div>
+        </div>
+        <div class="dev-name">
+            <div>© Elior Abramoviz</div>
+            <div class="sub-credit">Inspired by Noam Ron</div>
+        </div>
+    </div>
+    </div>
+
+    <script src="moment.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
     </body>
+
 </html>

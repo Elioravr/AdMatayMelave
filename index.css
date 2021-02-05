@@ -235,6 +235,121 @@ body {
     margin-right: 5px;
 }
 
+.main-container .car-separator {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ccc;
+    position: relative;
+}
+
+.main-container .car-separator .sun {
+    font-size: 40px;
+    position: absolute;
+    left: 30px;
+    top: 20px;
+}
+
+.main-container .car-separator .cloud {
+    font-size: 40px;
+    position: absolute;
+    top: 20px;
+    animation: passing-cloud 4s infinite;
+    animation-timing-function: linear;
+    transform: translateX(-1500%);
+}
+
+.main-container .car-separator .cloud-1 {
+    animation: passing-cloud 12s 2s infinite;
+    animation-timing-function: linear;
+}
+.main-container .car-separator .cloud-2 {
+    font-size: 30px;
+    top: 30px;
+    animation: passing-cloud 10s 1s infinite;
+    animation-timing-function: linear;
+}
+.main-container .car-separator .cloud-3 {
+    font-size: 50px;
+    top: 15px;
+    animation: passing-cloud 15s infinite;
+    animation-timing-function: linear;
+}
+.main-container .car-separator .cloud-4 {
+    font-size: 50px;
+    animation: passing-cloud 20s infinite;
+    animation-timing-function: linear;
+}
+.main-container .car-separator .cloud-5 {
+    animation: passing-cloud 12s 5s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .car {
+    font-size: 80px;
+    position: absolute;
+    bottom: -18px;
+    animation: separator-driving 0.5s infinite;
+    animation-timing-function: linear;
+    z-index: 10;
+}
+
+.main-container .car-separator .music {
+    font-size: 30px;
+    position: absolute;
+    top: 70px;
+    animation: flying-music 1s infinite;
+    animation-timing-function: linear;
+    z-index: 9;
+}
+
+.main-container .car-separator .music-2 {
+    animation: flying-music-2 1s 0.5s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .music-3 {
+    animation: flying-music-3 1s 0.7s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .music-4 {
+    animation: flying-music-4 1s 1.3s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .view {
+    font-size: 60px;
+    position: absolute;
+    bottom: -12px;
+    animation: passing-view 20s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .signpost {
+    font-size: 60px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    transform: translateX(-1500%);
+    animation: passing-cloud 8s 3s infinite;
+    animation-timing-function: linear;
+}
+
+.main-container .car-separator .signpost:after {
+    content: ' ';
+    height: 20px;
+    width: 3px;
+    background: #333;
+    display: block;
+    margin: auto;
+}
+
+.main-container .car-separator .signpost img {
+    width: 33px;
+    display: block;
+}
+
 .main-container .footer {
     margin-top: 50px;
 }
@@ -376,5 +491,79 @@ body {
     }
     100% {
         transform: scaleX(-1) rotate(0);
+    }
+}
+
+@keyframes separator-driving {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes passing-cloud {
+    0% {
+        transform: translateX(-1500%);
+    }
+    100% {
+        transform: translateX(1500%);
+    }
+}
+
+@keyframes flying-music {
+    0% {
+        transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(120px) translateY(-40px) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flying-music-2 {
+    0% {
+        transform: translateX(-20px) translateY(-20px) scale(1) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-120px) translateY(-40px) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flying-music-3 {
+    0% {
+        transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-120px) translateY(-10px) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flying-music-4 {
+    0% {
+        transform: translateX(20px) translateY(-20px) scale(1) rotate(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(120px) translateY(-10px) scale(0.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes passing-view {
+    0% {
+        transform: translateX(-800%);
+    }
+    100% {
+        transform: translateX(800%);
     }
 }
