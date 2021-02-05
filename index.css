@@ -241,6 +241,7 @@ body {
     justify-content: center;
     border-bottom: 2px solid #ccc;
     position: relative;
+    margin-bottom: 40px;
 }
 
 .main-container .car-separator .sun {
