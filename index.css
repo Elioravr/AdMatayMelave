@@ -12,6 +12,17 @@ body {
 .main-container {
     padding-bottom: 50px;
     overflow-x: hidden;
+    transition: background-color 1s, color 1s;
+}
+
+.main-container.dark {
+    background-color: #333;
+    color: white;
+    /* overflow-x: hidden; */
+}
+
+.main-container.dark .header span {
+    background-color: #333;
 }
 
 .main-container .header {
@@ -53,6 +64,7 @@ body {
     right: 0;
     left: 0;
     text-align: center;
+    transition: background-color 1s, color 0.5s;
 }
 
 .main-container .header .traffic-light {
@@ -344,6 +356,9 @@ body {
     background: #333;
     display: block;
     margin: auto;
+}
+.main-container .car-separator .signpost:after {
+    background: white;
 }
 
 .main-container .car-separator .signpost img {

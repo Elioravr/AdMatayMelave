@@ -90,4 +90,17 @@ const renderEverything = () => {
     setCountdown('.old-driver-countdown-container', oldDriverMoment);
 }
 
+const darkModeButton = document.querySelector('.main-container .car-separator .sun');
+darkModeButton.addEventListener('click', () => {
+    const mainContainer = document.querySelector('.main-container');
+
+    if (mainContainer.classList.contains('dark')) {
+        mainContainer.classList.remove('dark');
+        darkModeButton.innerHTML = '☀️';
+    } else {
+        mainContainer.classList.add('dark');
+        darkModeButton.innerHTML = '🌔';
+    }
+})
+
 renderEverything();
