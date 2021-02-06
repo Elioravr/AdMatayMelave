@@ -1,5 +1,6 @@
 let licenseDate = new Date(2020, 11, 10);
 const savedDate = localStorage.getItem('licenseDate');
+let isDarkMode = localStorage.getItem('isDarkMode');
 
 if (savedDate) {
     licenseDate = new Date(savedDate);
@@ -91,16 +92,35 @@ const renderEverything = () => {
 }
 
 const darkModeButton = document.querySelector('.main-container .car-separator .sun');
-darkModeButton.addEventListener('click', () => {
+
+const setIsDarkMode = () => {
+    isDarkMode = localStorage.getItem('isDarkMode');
     const mainContainer = document.querySelector('.main-container');
 
-    if (mainContainer.classList.contains('dark')) {
+    if (isDarkMode === 'white') {
         mainContainer.classList.remove('dark');
         darkModeButton.innerHTML = '☀️';
     } else {
         mainContainer.classList.add('dark');
         darkModeButton.innerHTML = '🌔';
     }
-})
+}
+
+darkModeButton.addEventListener('click', () => {
+    const mainContainer = document.querySelector('.main-container');
+
+    if (isDarkMode !== 'white') {
+        mainContainer.classList.remove('dark');
+        darkModeButton.innerHTML = '☀️';
+        localStorage.setItem('isDarkMode', 'white')
+    } else {
+        mainContainer.classList.add('dark');
+        darkModeButton.innerHTML = '🌔';
+        localStorage.setItem('isDarkMode', 'dark')
+    }
+
+    isDarkMode = localStorage.getItem('isDarkMode');
+});
 
 renderEverything();
+setIsDarkMode();
