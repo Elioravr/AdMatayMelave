@@ -84,6 +84,10 @@ body {
     left: 13px;
 }
 
+.main-container.dark .header .traffic-light:after {
+    background-color: white;
+}
+
 .main-container .header .car {
     position: absolute;
     bottom: -20px;
@@ -357,7 +361,7 @@ body {
     display: block;
     margin: auto;
 }
-.main-container .car-separator .signpost:after {
+.main-container.dark .car-separator .signpost:after {
     background: white;
 }
 
