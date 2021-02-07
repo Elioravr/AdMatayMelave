@@ -7,12 +7,12 @@ body {
     font-family: 'Assistant', sans-serif;
     direction: rtl;
     margin: 0;
+    transition: background-color 1s, color 1s;
 }
 
 .main-container {
     padding-bottom: 50px;
     overflow-x: hidden;
-    transition: background-color 1s, color 1s;
 }
 
 body.dark {
