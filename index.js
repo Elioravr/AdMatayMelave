@@ -95,7 +95,7 @@ const darkModeButton = document.querySelector('.main-container .car-separator .s
 
 const setIsDarkMode = () => {
     isDarkMode = localStorage.getItem('isDarkMode');
-    const mainContainer = document.querySelector('.main-container');
+    const mainContainer = document.querySelector('body');
 
     if (isDarkMode === 'white') {
         mainContainer.classList.remove('dark');
@@ -107,7 +107,7 @@ const setIsDarkMode = () => {
 }
 
 darkModeButton.addEventListener('click', () => {
-    const mainContainer = document.querySelector('.main-container');
+    const mainContainer = document.querySelector('body');
 
     if (isDarkMode !== 'white') {
         mainContainer.classList.remove('dark');

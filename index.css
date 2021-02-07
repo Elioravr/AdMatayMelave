@@ -15,13 +15,13 @@ body {
     transition: background-color 1s, color 1s;
 }
 
-.main-container.dark {
+body.dark {
     background-color: #333;
     color: white;
     /* overflow-x: hidden; */
 }
 
-.main-container.dark .header span {
+body.dark .main-container .header span {
     background-color: #333;
 }
 
@@ -82,9 +82,10 @@ body {
     position: absolute;
     bottom: -12px;
     left: 13px;
+    transition: background-color 1s;
 }
 
-.main-container.dark .header .traffic-light:after {
+body.dark .main-container .header .traffic-light:after {
     background-color: white;
 }
 
@@ -360,8 +361,9 @@ body {
     background: #333;
     display: block;
     margin: auto;
+    transition: background-color 1s;
 }
-.main-container.dark .car-separator .signpost:after {
+body.dark .main-container .car-separator .signpost:after {
     background: white;
 }
 
