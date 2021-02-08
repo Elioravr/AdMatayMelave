@@ -97,7 +97,7 @@ const setIsDarkMode = () => {
     isDarkMode = localStorage.getItem('isDarkMode');
     const mainContainer = document.querySelector('body');
 
-    if (isDarkMode === 'white') {
+    if (!isDarkMode || isDarkMode === 'white') {
         mainContainer.classList.remove('dark');
         darkModeButton.innerHTML = '☀️';
     } else {
